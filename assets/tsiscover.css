@@ -1,0 +1,6 @@
+
+.sitelist {
+    max-height: 250px;
+    min-height: 250px;
+    overflow-y: scroll;
+}

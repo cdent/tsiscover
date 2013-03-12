@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tsiscover</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link
+        href="/bags/tsiscover_public/tiddlers/bootstrap.css"
+              rel="stylesheet" media="screen">
+        <link
+        href="/bags/tsiscover_public/tiddlers/bootstrap-responsive.css"
+              rel="stylesheet" media="screen">
+        <link href="/bags/tsiscover_public/tiddlers/tsiscover.css"
+            rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <div class="container-fluid" id="page">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <span class="brand">tsiscover</span>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div id="info" class="span3 alert alert-success">
+                            <button type="button" class="close"
+                                data-dismiss="alert">&times;</button>
+                    <h1>Hi</h1>
+                    <p>tsiscover is an experimental tool to help
+                    you find interesting spaces to include in yours.
+                    Spaces can provide changes to the behavior,
+                    look, language and content of your space.</p>
+                    <p>Each blue block comes from pre-defined tags. Space
+                    makers would be made aware of the relevant
+                    tags. Note that some of these spaces have the
+                    incorrect tags as a result of included SiteInfo
+                    tiddlers. Newer spaces are <em>always</em>
+                    created with their own SiteInfo so this problem
+                    will eventually fade away.</p>
+                    <p>Click on close buttons to remove content
+                    you aren't interested in. Reload the page to get
+                    it all back. Click on a space name to see its
+                    SiteInfo, and once implemented, choose to include
+                    the space.</p>
+                    <p>The actual include functionality does not yet
+                    work. The other main issue is that links in the
+                    SiteInfo link into the current space, not their
+                    home. Not sure if this can be resolved. Colors
+                    and styling are just bootstrap defaults.
+                    Something more awesome could come with feedback.</p>
+                    <p>Created with <a target="_blank"
+                        href="http://tsapp.tiddlyspace.com/">@tsapp</a>.</p>
+                </div>
+                <div id="data" class="span9">
+                </div>
+            </div>
+        </div>
+        <script id="slide-lump" type="text/x-handlebars-template">
+<div class="span4 alert alert-info">
+<button type="button" class="close"
+    data-dismiss="alert">&times;</button>
+<h1>{{ tag }}</h1>
+<ul id="{{ tag }}" class="sitelist">
+</ul>
+</div>
+        </script>
+        <script id="siteinfo" type="text/x-handlebars-template">
+<div id="sitemodal" tabindex="-1" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+            aria-hidden="true">&times;</button>
+        <h3><a target="_blank" href="{{uri}}">{{ space }}</a> <small>Include Not Yet Implemented</small></h3>
+    </div>
+    <div id="siteinfotext" class="modal-body">
+        {{ render }}
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Nope</button>
+        <button class="btn btn-primary">Include!</button>
+    </div>
+</div>
+        </script>
+        <script src="/bags/common/tiddlers/jquery.js"></script>
+        <script src="/bags/tsiscover_public/tiddlers/bootstrap.js"></script>
+        <script src="/bags/tsiscover_public/tiddlers/handlebars.js"></script>
+        <script src="/bags/tsiscover_public/tiddlers/tsiscover.js"></script>
+    </body>
+</html>
